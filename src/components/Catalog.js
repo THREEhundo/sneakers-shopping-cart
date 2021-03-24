@@ -1,13 +1,7 @@
 import React, { useCallback } from "react";
 import { Link } from "react-router-dom";
 
-const ProductsAll = ({
-  handleClick,
-  data,
-  error,
-  isPending,
-  showShoppingCart,
-}) => {
+const Catalog = ({ handleClick, data, error, isPending, showShoppingCart }) => {
   const addToCart = useCallback(
     (e) => {
       const { id } = e.target.parentNode.parentNode;
@@ -30,7 +24,7 @@ const ProductsAll = ({
             className="flex flex-col self-center justify-evenly rounded-lg border-2 border-white w-11/12 h-auto py-2 px-2 my-2 mx-auto mb-5"
           >
             <div className="text-center">
-              <Link to={`/catalogue/${snkr.linkID}`}>
+              <Link to={`/catalog/${snkr.linkID}`}>
                 <div className="bg-secondary">
                   <img
                     className="rounded-xl mx-auto transform hover:scale-90 duration-200 hover:shadow-lg"
@@ -74,4 +68,4 @@ const ProductsAll = ({
   );
 };
 
-export default ProductsAll;
+export default Catalog;

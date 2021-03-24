@@ -3,8 +3,8 @@ import React, { useState, useCallback } from "react";
 import { Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
-import ProductsAll from "./components/ProductsAll";
-import ProductSingle from "./components/ProductSingle";
+import Catalog from "./components/Catalog";
+import ProductPage from "./components/ProductPage";
 import ShoppingCart from "./components/ShoppingCart";
 import useFetch from "./components/useFetch";
 
@@ -64,8 +64,8 @@ const App = () => {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/catalogue">
-          <ProductsAll
+        <Route exact path="/catalog">
+          <Catalog
             showShoppingCart={showShoppingCart}
             handleClick={handleClick}
             data={data}
@@ -73,8 +73,8 @@ const App = () => {
             isPending={isPending}
           />
         </Route>
-        <Route exact path="/catalogue/:linkID">
-          <ProductSingle
+        <Route exact path="/catalog/:linkID">
+          <ProductPage
             showShoppingCart={showShoppingCart}
             handleClick={handleClick}
             data={data}

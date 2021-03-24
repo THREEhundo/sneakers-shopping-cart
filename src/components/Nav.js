@@ -50,8 +50,8 @@ const Nav = ({ toggleCart, shoppingCartItems = [] }) => {
             <li className="mr-3 text-2xl hover:underline">
               <Link to="/">Home</Link>
             </li>
-            <li id="catalogueLink" className="mr-2 text-2xl hover:underline">
-              <Link to="/catalogue">Catalogue</Link>
+            <li id="catalogLink" className="mr-2 text-2xl hover:underline">
+              <Link to="/catalog">Catalog</Link>
             </li>
             <li className="flex flex-nowrap justify-center self-center h-full">
               <ShoppingCartBtn />
