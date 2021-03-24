@@ -23,11 +23,11 @@ const ProductSingle = ({
   );
 
   const PickSnkr = () => {
-    let mod;
+    let model;
     if (data) {
       const copy = data.map((x) => x);
       const snkr = copy.find((x) => x.linkID === linkID);
-      mod = (
+      model = (
         <div className="h-auto p-16" key={snkr.id} id={snkr.id}>
           <img
             className="rounded-xl m-auto"
@@ -57,7 +57,7 @@ const ProductSingle = ({
         </div>
       );
     }
-    return mod;
+    return model;
   };
 
   return (
