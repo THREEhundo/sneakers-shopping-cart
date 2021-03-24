@@ -60,7 +60,6 @@ const App = () => {
         toggleCart={toggleCart}
       />
       <Nav toggleCart={toggleCart} shoppingCartItems={shoppingCartItems} />
-      <Home />
       <Switch>
         <Route exact path="/">
           <Home />
