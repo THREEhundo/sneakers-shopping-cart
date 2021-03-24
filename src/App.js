@@ -48,7 +48,7 @@ const App = () => {
   };
 
   return (
-    <Router>
+    <Router basename="/">
       <div className="bg-primary text-secondary h-screen w-full flex flex-col">
         <ShoppingCart
           showShoppingCart={showShoppingCart}
