@@ -111,12 +111,12 @@ const ShoppingCart = ({
     return (
       <div
         id="total"
-        className="flex text-2xl text-right bg-primary text-secondary w-full pr-2 border-t-2 pt-2"
+        className="flex text-2xl text-right bg-primary text-secondary w-full pb-2 py-2 border-t-2"
       >
-        <button className="bg-secondary text-primary rounded-lg ring-4 ring-primary my-2 rounded-full py-1 px-2 hover:text-secondary hover:bg-primary hover:ring-secondary focus:outline-none focus:bg-primary focus:ring-secondary focus:text-secondary py-1">
+        <button className="bg-secondary text-primary rounded-lg ring-4 ring-primary my-auto rounded-full py-1 px-2 hover:text-secondary hover:bg-primary hover:ring-secondary focus:outline-none focus:bg-primary focus:ring-secondary focus:text-secondary py-1 ml-1">
           Checkout
         </button>
-        <div className="ml-auto">Total: ${due}</div>
+        <div className="ml-auto mr-1 my-auto">Total: ${due}</div>
       </div>
     );
   };
