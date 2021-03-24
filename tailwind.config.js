@@ -33,7 +33,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: (theme) => ({
-        "hero-pattern": "url('./src/imgs/jordan1.jpg')",
+        "hero-pattern": "url('./imgs/jordan1.jpg')",
       }),
     },
   },

@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState, useCallback } from "react";
-import { HashRouter, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 import ProductsAll from "./components/ProductsAll";
@@ -48,44 +48,42 @@ const App = () => {
   };
 
   return (
-    <HashRouter basename="/">
-      <div className="bg-primary text-secondary h-screen w-full flex flex-col">
-        <ShoppingCart
-          showShoppingCart={showShoppingCart}
-          setShowShoppingCart={setShowShoppingCart}
-          shoppingCartItems={shoppingCartItems}
-          setShoppingCartItems={setShoppingCartItems}
-          data={data}
-          error={error}
-          isPending={isPending}
-          toggleCart={toggleCart}
-        />
-        <Nav toggleCart={toggleCart} shoppingCartItems={shoppingCartItems} />
-        <Switch>
-          <Route path={process.env.PUBLIC_URL + "/"}>
-            <Home />
-          </Route>
-          <Route exact path="/catalogue">
-            <ProductsAll
-              showShoppingCart={showShoppingCart}
-              handleClick={handleClick}
-              data={data}
-              error={error}
-              isPending={isPending}
-            />
-          </Route>
-          <Route exact path="/catalogue/:linkID">
-            <ProductSingle
-              showShoppingCart={showShoppingCart}
-              handleClick={handleClick}
-              data={data}
-              error={error}
-              isPending={isPending}
-            />
-          </Route>
-        </Switch>
-      </div>
-    </HashRouter>
+    <div className="bg-primary text-secondary h-screen w-full flex flex-col">
+      <ShoppingCart
+        showShoppingCart={showShoppingCart}
+        setShowShoppingCart={setShowShoppingCart}
+        shoppingCartItems={shoppingCartItems}
+        setShoppingCartItems={setShoppingCartItems}
+        data={data}
+        error={error}
+        isPending={isPending}
+        toggleCart={toggleCart}
+      />
+      <Nav toggleCart={toggleCart} shoppingCartItems={shoppingCartItems} />
+      <Switch>
+        <Route path={process.env.PUBLIC_URL + "/"}>
+          <Home />
+        </Route>
+        <Route exact path="/catalogue">
+          <ProductsAll
+            showShoppingCart={showShoppingCart}
+            handleClick={handleClick}
+            data={data}
+            error={error}
+            isPending={isPending}
+          />
+        </Route>
+        <Route exact path="/catalogue/:linkID">
+          <ProductSingle
+            showShoppingCart={showShoppingCart}
+            handleClick={handleClick}
+            data={data}
+            error={error}
+            isPending={isPending}
+          />
+        </Route>
+      </Switch>
+    </div>
   );
 };
 
