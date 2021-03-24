@@ -61,7 +61,7 @@ const App = () => {
       />
       <Nav toggleCart={toggleCart} shoppingCartItems={shoppingCartItems} />
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
           <Home />
         </Route>
         <Route exact path="/catalogue">

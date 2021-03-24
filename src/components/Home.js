@@ -6,7 +6,7 @@ const Home = () => {
     config: {
       duration: 200,
     },
-    opacity: document.readyState === "complete" ? 1 : 0,
+    opacity: document.readyState === "complete" ? 0.8 : 0,
     transform:
       document.readyState === "complete"
         ? "translateY(0%)"
@@ -20,7 +20,7 @@ const Home = () => {
           <animated.div
             id="springUp"
             style={{ ...springUp, overflow: "hidden" }}
-            className="z-0 w-80 absolute inset-x-0 bottom-28 my-5 mx-auto p-2 shadow-2xl border-4 border-white rounded opacity-50"
+            className="z-0 w-80 absolute inset-x-0 bottom-28 my-5 mx-auto p-2 shadow-2xl border-4 border-white rounded opacity-0"
           >
             <h2 className="text-center text-3xl">Air Jordan 1</h2>
             <p className="text-sm text-justify">
