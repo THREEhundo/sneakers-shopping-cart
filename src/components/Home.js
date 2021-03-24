@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <div className="w-auto h-full">
       <div className="flex flex-column w-auto h-full overflow-y-hidden">
-        <div className="bg-img bg-contain bg-fixed bg-no-repeat bg-center w-screen">
+        <div className="bg-hero-pattern bg-contain bg-fixed bg-no-repeat bg-center w-screen">
           <animated.div
             id="springUp"
             style={{ ...springUp, overflow: "hidden" }}
