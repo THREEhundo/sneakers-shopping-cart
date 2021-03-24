@@ -8,3 +8,7 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield; /* Firefox */
 }
+
+.bg-img {
+  background-image: url("./imgs/jordan1.jpeg");
+}
