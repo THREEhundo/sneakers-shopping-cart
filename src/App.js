@@ -1,12 +1,13 @@
 import "./App.css";
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, Suspense } from "react";
 import { Route, Switch } from "react-router-dom";
-import Nav from "./components/Nav";
-import Home from "./components/Home";
-import Catalog from "./components/Catalog";
-import ProductPage from "./components/ProductPage";
-import ShoppingCart from "./components/ShoppingCart";
 import useFetch from "./components/useFetch";
+
+const Nav = React.lazy(() => import("./components/Nav"));
+const Home = React.lazy(() => import("./components/Home"));
+const Catalog = React.lazy(() => import("./components/Catalog"));
+const ProductPage = React.lazy(() => import("./components/ProductPage"));
+const ShoppingCart = React.lazy(() => import("./components/ShoppingCart"));
 
 const App = () => {
   const [showShoppingCart, setShowShoppingCart] = useState(false);
@@ -49,40 +50,42 @@ const App = () => {
 
   return (
     <div className="bg-primary text-secondary h-screen w-full flex flex-col">
-      <ShoppingCart
-        showShoppingCart={showShoppingCart}
-        setShowShoppingCart={setShowShoppingCart}
-        shoppingCartItems={shoppingCartItems}
-        setShoppingCartItems={setShoppingCartItems}
-        data={data}
-        error={error}
-        isPending={isPending}
-        toggleCart={toggleCart}
-      />
-      <Nav toggleCart={toggleCart} shoppingCartItems={shoppingCartItems} />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/catalog">
-          <Catalog
-            showShoppingCart={showShoppingCart}
-            handleClick={handleClick}
-            data={data}
-            error={error}
-            isPending={isPending}
-          />
-        </Route>
-        <Route exact path="/catalog/:linkID">
-          <ProductPage
-            showShoppingCart={showShoppingCart}
-            handleClick={handleClick}
-            data={data}
-            error={error}
-            isPending={isPending}
-          />
-        </Route>
-      </Switch>
+      <Suspense fallback={<div>Loading...</div>}>
+        <ShoppingCart
+          showShoppingCart={showShoppingCart}
+          setShowShoppingCart={setShowShoppingCart}
+          shoppingCartItems={shoppingCartItems}
+          setShoppingCartItems={setShoppingCartItems}
+          data={data}
+          error={error}
+          isPending={isPending}
+          toggleCart={toggleCart}
+        />
+        <Nav toggleCart={toggleCart} shoppingCartItems={shoppingCartItems} />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/catalog">
+            <Catalog
+              showShoppingCart={showShoppingCart}
+              handleClick={handleClick}
+              data={data}
+              error={error}
+              isPending={isPending}
+            />
+          </Route>
+          <Route exact path="/catalog/:linkID">
+            <ProductPage
+              showShoppingCart={showShoppingCart}
+              handleClick={handleClick}
+              data={data}
+              error={error}
+              isPending={isPending}
+            />
+          </Route>
+        </Switch>
+      </Suspense>
     </div>
   );
 };
