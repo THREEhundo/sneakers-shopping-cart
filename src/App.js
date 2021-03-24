@@ -62,7 +62,7 @@ const App = () => {
         />
         <Nav toggleCart={toggleCart} shoppingCartItems={shoppingCartItems} />
         <Switch>
-          <Route exact path="/">
+          <Route path={process.env.PUBLIC_URL + "/"}>
             <Home />
           </Route>
           <Route exact path="/catalogue">
