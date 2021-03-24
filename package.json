@@ -2,7 +2,7 @@
   "name": "sneakers-shopping-cart",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://threehundo.github.io/sneakers-shopping-cart/",
+  "homepage": "https://threehundo.github.io/",
   "dependencies": {
     "@craco/craco": "^6.1.1",
     "@testing-library/jest-dom": "^5.11.9",
@@ -18,7 +18,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b master -d build",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
