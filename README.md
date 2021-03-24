@@ -4,7 +4,7 @@
 
 A simple & clean shopping cart app.
 
-- [Live](https://threehundo.github.io/sneakers-shopping-cart/)
+- [Live View](https://threehundo.github.io/sneakers-shopping-cart/)
 
 ### Description
 
@@ -22,15 +22,15 @@ A simple & clean shopping cart app.
 
 ![Catalog](https://user-images.githubusercontent.com/35667805/112368780-ae2c7980-8c98-11eb-8b63-36634a871ed5.png)
 
-### Product
+#### Product
 
 ![Product](https://user-images.githubusercontent.com/35667805/112368786-af5da680-8c98-11eb-8e7a-a39223c9a30d.png)
 
-### Shopping Cart
+#### Shopping Cart
 
 ![Cart](https://user-images.githubusercontent.com/35667805/112368789-aff63d00-8c98-11eb-83fa-4c053c62d69b.png)
 
-### Libraries, Extensions, & Tools
+#### Libraries, Extensions, & Tools
 
 - ReactJS
 - React Router
