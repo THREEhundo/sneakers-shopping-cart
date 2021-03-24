@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState, useCallback } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 import ProductsAll from "./components/ProductsAll";
@@ -48,7 +48,7 @@ const App = () => {
   };
 
   return (
-    <Router>
+    <HashRouter basename="/">
       <div className="bg-primary text-secondary h-screen w-full flex flex-col">
         <ShoppingCart
           showShoppingCart={showShoppingCart}
@@ -85,7 +85,7 @@ const App = () => {
           </Route>
         </Switch>
       </div>
-    </Router>
+    </HashRouter>
   );
 };
 
