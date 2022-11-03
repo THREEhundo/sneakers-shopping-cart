@@ -55,4 +55,4 @@ Take a look at these couple examples that I have in my own portfolio:
 
 **America the Beautiful:** https://github.com/THREEhundo/america-the-beautiful
 
-**Sneaker Shopping Cart:** https://github.com/THREEhundo/sneakers-shopping-cart
+**Pokemon TCG Memory Game:** https://github.com/THREEhundo/pokemon-tcg-memory-game
