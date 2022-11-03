@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-A simple & clean shopping cart app.
+A simple & clean shopping cart app for Jordan sneakers.
 
 - [Live View](https://threehundo.github.io/sneakers-shopping-cart/)
 
@@ -36,3 +36,23 @@ A simple & clean shopping cart app.
 - React Router
 - React Spring
 - Tailwind CSS
+
+#### Optimizations
+
+- No 'Access-Control-Allow-Origin' header bug needs to be fixed. 
+- API needs to be switched to one that doesn't charge per request.
+
+#### Lessons Learned
+
+- The value of having utility classes for CSS. Creating arbitrary class names were a headache for me. Using TailwindCSS allows me to just code out what I want the app to look like and not think about naming a variable of a box.
+
+#### Examples:
+Take a look at these couple examples that I have in my own portfolio:
+
+**Expenses Chart Component:** https://github.com/THREEhundo/expenses-chart-component-main
+
+**Level Ground MMA:** https://github.com/THREEhundo/level-ground
+
+**America the Beautiful:** https://github.com/THREEhundo/america-the-beautiful
+
+**Sneaker Shopping Cart:** https://github.com/THREEhundo/sneakers-shopping-cart
